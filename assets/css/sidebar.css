@@ -1,0 +1,118 @@
+/* VARIABLES */
+body {
+    --sidebar-width: 250px;
+    --sidebar-transition-duration: 0.4s;
+
+    overflow-x: hidden;
+}
+
+
+
+/* STYLES */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+code {
+    background: #F1F1F1 !important;
+    margin: 0.3em 0 !important;
+    border-radius: 4px;
+}
+
+code.short-code, code.long-code{
+    padding: 0.4em 0.6em;
+    font-size: 0.875em;
+    color: #d63384;
+    word-wrap: break-word;
+}
+
+code.long-code {
+    display: block;
+}
+
+.sidebar {
+    top: 0;
+    left: 0;
+    height: 100%;
+    position: fixed;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 0;
+    overflow: hidden;
+    -webkit-transition: width var(--sidebar-transition-duration) ease-in-out;
+    -moz-transition: width var(--sidebar-transition-duration) ease-in-out ;
+    transition: width var(--sidebar-transition-duration) ease-in-out;
+}
+
+.sidebar.active {
+    width: var(--sidebar-width);
+}
+
+.sidebar li {
+    display: block;
+    min-width: var(--sidebar-width);
+}
+
+.sidebar li a {
+    display: block;
+    padding: 0.4em 0.4em;
+    text-decoration: none;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar li a:hover {
+    background: rgba(60, 60, 60, 0.4);
+}
+
+.sidebar li a.active{
+    background: #00b894;
+    border-right: 0.5em solid rgba(255, 255, 255, 0.5)
+}
+
+.content {
+    margin-left: 0;
+    padding: 0;
+    min-width: 100%;
+    -webkit-transition: margin-left var(--sidebar-transition-duration) ease-in-out;
+    -moz-transition: margin-left var(--sidebar-transition-duration) ease-in-out;
+    transition: margin-left var(--sidebar-transition-duration) ease-in-out;
+}
+
+.content.active{
+    margin-left: var(--sidebar-width);
+}
+
+.nav {
+    border-bottom: 1px rgba(230, 230, 230, 0.6);
+    box-shadow: 3px 2px 3px rgba(80, 80, 8, 0.3);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-bottom: 4em;
+    border-radius: 0;
+    background-color: rgb(240, 240, 240);
+    z-index: 9999;
+}
+
+.nav-link {
+    color: #222;
+}
+
+.nav-link .bi-list {
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 0.4em 0.6em;
+}
+
+.content-block {
+    min-width: 100%;
+    padding: 0.4em 1em;
+    margin-top: 2.6em;
+    display: block;
+}
+
+.content-block-header{
+    padding: 0.7em 1.5em;
+}
