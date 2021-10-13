@@ -22,11 +22,14 @@
 
                     if (this.hash !== null && this.hash !== ""){                
                         var target = document.getElementById( this.hash.replace("#", "") );
-                        var elementTop = this.hash.indexOf("home") === 1 ? 0 : target.offsetTop;
+                        var elementTop = ( target.offsetTop < 70 ) ? 0 : target.offsetTop;
                         $html.animate({
                             scrollTop: elementTop
                         }, 800);
-                    }//if this.hash            
+                    }//if this.hash      
+                    
+
+                    return false;
 
                  });//contentBlockButtons.on
             },//enableSmoothScroll
