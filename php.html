@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"  />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!-- STYLES -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <link href="assets/libraries/highlight/styles/xcode.min.css" rel="stylesheet" />
+    <link href="assets/css/sidebar.css" rel="stylesheet" />
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="assets/libraries/highlight/highlight.min.js"></script>
+    <script src="assets/js/sidebar.js" type="text/javascript"></script>
+    <script src="assets/js/app.js" type="text/javascript"></script>
+</head>
+<body>
+    <!-- SIDEBAR -->
+    <ul id="sidebar" class="sidebar">
+        <li><a href="#variables" class="content-block-button active">Variables</a></li>
+        <li><a href="#tiposDeDatos" class="content-block-button">Tipos de Datos</a></li>
+    </ul>
+    <!-- CONTENT -->
+    <div id="content" class="content container" style="scroll-behavior: smooth;">
+        <!-- navbar -->
+        <nav class="nav">
+            <li class="nav-item">
+                <a class="nav-link sidebar-toggle" aria-current="page" href="#">
+                    <i class="bi bi-list"></i>
+                </a>
+            </li>
+        </nav>
+        <!-- Variables -->
+        <div id="variables" class="content-block active">
+            <h3 class="content-block-header text-left">Variables</h3>            
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <i class="bi bi-caret-right"></i>
+                    Los nombres de funciones y clases definidas por el usuario son case-insensitive (ej. <code class="short-code"> echo, Echo, ECHO </code>). 
+                    Por su parte, las variables son case-sensitive (ej. <code class="short-code">$var, $Var, $VAR</code> son diferentes).
+                </li>
+                <li class="list-group-item">
+                    <i class="bi bi-caret-right"></i>
+                    En PHP los enunciados se separan por un punto y coma, excepto cuando se trata de la última línea 
+                    de código antes de las etiquetas de cierre de PHP "<i>?></i>"". 
+                    <code class="long-code">&lt?php /* some code */ ... echo "Última línea" //No semicolon required  ?></code>
+                </li>
+                <li class="list-group-item">
+                    <i class="bi bi-caret-right"></i>
+                    Existen tres formas de agregar comentarios en PHP: 
+                    <code class="short-code"># single line comment... // single line comment... /* Multiline comment... */</code>
+                </li>
+                <li class="list-group-item">
+                    <i class="bi bi-caret-right"></i>
+                    Las variables en PHP se declaran con el símbolo <i>$</i>. El primer carácter debe de 
+                    ser una letra (incluyendo con acento), un guión bajo "<i>_</i>" o cualquier carácter ASCII 
+                    del 0x7F (127) al 0xFF (255). Por ejemplo: <code class="short-code">$name, $_username, $unaEñe, $árbol</code>
+                </li>
+                <li class="list-group-item">
+                    <i class="bi bi-caret-right"></i>
+                    Una <b>constante</b> es un identificador para un valor que nunca va a cambiar. 
+                    <pre>
+                        <code class="language-php">
+                            define("PI", 3.1416);
+                            echo PI; //3.1416
+                        </code>
+                    </pre>
+                </li>
+            </ul>
+        </div><!-- Variables -->
+        <!-- Tipos de datos -->
+        <div id="tiposDeDatos" class="content-block">
+            <h3 class="content-block-header text-left">Tipos de Datos</h3>            
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <i class="bi bi-caret-right"></i>
+                    PHP ofrece 8 tipos de datos. Cuatro de ellos son escalares (valor simples): enteros, números flotantes,
+                    cadenas de caracteres y booleanos. Dos son especiales (colecciones): arreglos y objetos. Los dos restantes son 
+                    especiales: recursos (resource) y NULL.
+                </li>
+                <li class="list-group-item">
+                    <i class="bi bi-caret-right"></i>
+                    Los <b>integers</b> representan números enteros (ej. 1, 20, 987). El tamaño y valor máximo que puede almacenarse 
+                    como un número entero depende de la máquina que ejecuta PHP. No obstante, el tamaño en bytes del tipo integer de 
+                    PHP está contenido en la constante <i>PHP_INT_SIZE</i>. El máximo valor aceptado por el tipo integer de PHP 
+                    está contenido en PHP_INT_MAX. Los integer pueden ser representados como números <i>octales</i>, <i>hexadecimales</i>
+                    o <i>binarios</i>. A partir de PHP 7.4 las cantidades pueden contener guiones. Por ejemplo: <code class="short-code">3_489.25 // 3489.25</code>
+                </li>
+                <li class="list-group-item">
+                    <i class="bi bi-caret-right"></i>
+                    Los números <b>octales</b> se escriben con "0" al inicio seguido por cualquier cantidad 
+                    de dígitos (0-7). Al igual que los numeros decimales, pueden ser positivos o negativos.
+                    Por ejemplo <code class="short-code">0755 // decimal 493</code>, <code class="short-code">+010 // decimal 8</code>
+                </li>
+                <li class="list-group-item">
+                    <i class="bi bi-caret-right"></i>
+                    Los números <b>hexadecimales</b> inician con "0x" seguido por cualquier cantidad de dígitos (0-9) y letras (A-F).
+                    Las letras pueden ser mayúsculas o minúsculas. Por ejemplo: <code class="short-code">0xFF // decimal 255, -0x10 // decimal -16</code>
+                </li>
+                <li class="list-group-item">
+                    <i class="bi bi-caret-right"></i>
+                    Los números <b>binarios</b> inician con "0b" seguido por cualquier cantidad de dígitos (0-1).
+                    Por ejemplo: <code class="short-code">0B10 // decimal 2, 0b11111111 // decimal 255</code>
+                </li>
+                <li class="list-group-item">
+                    <i class="bi bi-caret-right"></i>
+                    Los números <b>float</b> sirven para representar números con decimales. PHP permite manejar números flotantes como 
+                    tradicionalmente se hace (ej. <code class="short-code">3.1416, 2.5, 9.2</code>) y números con representación exponencial 
+                    colocando al final una "E" y seguido la potencia de 10 que se desea usar.
+                    (ej. <code class="short-code">0.314E1 // 0.314 * 10 ^ 1 = 3.14,... 314E-2 // 314 * 10 ^ -2 = 3.14</code> )
+                </li>
+                <li class="list-group-item">
+                    <i class="bi bi-caret-right"></i>
+                    Los números de punto flotante no son precisos. Por ejemplo, en muchos sistemas 3.5 en realidad está representado como 
+                    3.4999999999. La forma correcta y segura de comparar cantidades flotantes es comparar varios decimales: 
+                    <pre>
+                        <code class="language-php">
+                            if (intval($a * 1000) == intval($b * 1000)) { 
+                                // numbers equal to three decimal places
+                            }
+                        </code>
+                    </pre>
+                    El manual de PHP sugiere comparar cantidades flotantes como sigue:
+                    <pre>
+                        <code class="language-php">
+                            $presicion = 5; //dígitos decimales a comparar
+                            $epsilon = 1 * pow(10, -$presicion); // 0.00001 en este caso
+                            $a = 1.4;
+                            $b = (1.1 + 0.3); // 1.4
+                            
+                            if ( abs($a - $b) < $epsilon ){ //Realizar la comparación
+                                echo "son iguales"; //En este ejemplo son iguales
+                            } else {
+                                echo "no son iguales";
+                            }
+                        </code>
+                    </pre>
+                </li>
+            </ul>
+        </div><!-- Tipos de datos -->
+    </div>
+</body>
+</html>
