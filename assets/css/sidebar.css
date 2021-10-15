@@ -24,7 +24,7 @@ code {
 }
 
 code.short-code, code.long-code{
-    padding: 0.4em 0.6em;
+    padding: 0.2em 0.8em !important;
     font-size: 0.875em;
     color: #d63384;
     word-wrap: break-word;
