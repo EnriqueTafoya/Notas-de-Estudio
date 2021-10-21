@@ -26,7 +26,10 @@ code.long-code {
     display: block;
 }
 
-i.code {
+q {
     font-style: normal; 
+    text-decoration: none;
     font-family: var(--bs-font-monospace);
+    quotes: none; 
+    color: #2c3e50;
 }
