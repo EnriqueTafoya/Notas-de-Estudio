@@ -2,38 +2,10 @@
 body {
     --sidebar-width: 250px;
     --sidebar-transition-duration: 0.4s;
-
     overflow-x: hidden;
 }
 
 /* STYLES */
-*{
-    margin: 0px;
-    padding: 0px;
-}
-
-pre , pre code.hljs{
-    margin: 0 !important;
-}
-
-code {
-    background: #F1F1F1 !important;
-    margin: 0.3em 0 !important;
-    border-radius: 4px;
-    padding: 0 !important;
-}
-
-code.short-code, code.long-code{
-    padding: 0.2em 0.8em !important;
-    font-size: 0.875em;
-    color: #d63384;
-    word-wrap: break-word;
-}
-
-code.long-code {
-    display: block;
-}
-
 .sidebar {
     top: 0;
     left: 0;
