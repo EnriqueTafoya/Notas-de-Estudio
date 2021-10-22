@@ -33,3 +33,29 @@ q {
     quotes: none; 
     color: #30336b;
 }
+
+input#searchBox {
+    display: block;
+    width: 97%;
+    margin: 0.2em auto;
+    padding: 0 0.4em; 
+    box-sizing: border-box;
+    height: 2.5em; 
+    line-height: 2.5em;
+}
+
+input:focus {
+    border: 1px solid #333 !important;
+    box-shadow: none;
+}
+
+#cleanSearchBoxButton {
+    position: absolute; 
+    top: 0.45em; 
+    right: 0.5em;
+    width: 2em;
+    height: 2em; 
+    line-height: 2em;
+    text-align: center;
+    display: none;
+}
